@@ -1,0 +1,677 @@
+
+:root {
+    /* Primary */
+    --navy: #120023;
+    --cream: #F4EBD8;
+    /* Secondary */
+    --mustard: #D49400;
+    --red: #BC1A1A;
+    --purple: #6355D8;
+    /* Supporting */
+    --light-blue: #9087D8;
+    --light-pink: #FF9A9A;
+    --pale-yellow: #FFD16A;
+}
+
+/* ---------- General ---------- */
+body {
+    margin: 0;
+    font-family: Futura;
+    color: var(--navy);
+    font-size: 1rem;
+    line-height: 1.3;
+}
+
+p {
+    margin: 0 0 10px;
+    line-height: inherit;
+}
+
+/* ---------- Navigation ---------- */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 100px;
+    background: var(--mustard);
+}
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: var(--cream);
+    text-decoration: none;
+    transition: color .25s ease;
+}
+
+nav a:hover {
+    color: var(--red);
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+}
+
+/* ---------- Sections ---------- */
+section {
+    padding: 90px 100px;
+}
+
+h1 {
+    font-size: 3rem;
+    font-family: "Fraunces", serif;
+    margin: 0 0 16px;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: "Fraunces", serif;
+    font-weight: bold;
+    line-height: 1;
+    margin: 0 0 32px;
+}
+
+h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0 0 10px;
+    color: var(--purple);
+    margin: 0 0 16px;
+}
+
+/* ========================================== Opening ========================================== */
+.opening {
+    background-image: linear-gradient(rgba(18, 0, 35, .55), rgba(18, 0, 35, .55)), url("../images/hero.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--cream);
+    padding: 140px 40px 80px;
+}
+
+.opening-text {
+    max-width: 750px;
+}
+
+.opening-subtitle {
+    font-size: 1.15rem;
+}
+
+/* ========================================== The Gap ========================================== */
+.gap {
+    padding: 150px 0;
+    background: white
+}
+
+.gap-title {
+    display: grid;
+    grid-template-columns: auto minmax(500px, 800px) auto;
+    align-items: center;
+    gap: 40px;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.gap-the,
+.gap-word {
+    font-size: 5rem;
+    font-weight: bold;
+    color: var(--red);
+    line-height: 1;
+}
+
+.gap-content {
+    text-align: center;
+}
+
+.gap-content p {
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+/* ========================================== What We're Building ========================================== */
+#building {
+    background: var(--cream);
+    padding: 80px 100px 50px;
+    text-align: center;
+}
+
+#building h1 {
+    color: var(--purple);
+}
+
+.building-intro {
+    max-width: 750px;
+    margin: 0 auto 70px;
+    font-size: 1.2rem;
+}
+
+.building-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+}
+
+.building-item h3 {
+    color: var(--light-blue);
+}
+
+/* ========================================== Where We're Headed ========================================== */
+#timeline {
+    background: var(--cream);
+    padding: 80px 100px 50px;
+    text-align: right;
+}
+
+#timeline h2 {
+    max-width: 1200px;
+    margin: 0 auto 60px;
+    text-align: center;
+    color: var(--purple);
+}
+
+#timeline h3 {
+    color: var(--mustard);
+}
+
+.roadmap {
+    position: relative;
+    width: 800px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.roadmap::before {
+    content: "";
+    position: absolute;
+    right: -30px;
+    top: 10px;
+    bottom: 10px;
+    width: 3px;
+    background: var(--mustard);
+}
+
+.roadmap-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+    padding: 0 40px 70px 0;
+}
+
+.roadmap-item:last-child {
+    padding-bottom: 0;
+}
+
+.roadmap-item::before {
+    content: "";
+    position: absolute;
+    right: -1px;
+    top: 8px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--cream);
+    border: 4px solid var(--mustard);
+    box-sizing: border-box;
+}
+
+.roadmap-item h3 {
+    margin: 0 0 12px;
+    text-align: right;
+}
+
+/* Content */
+
+.roadmap-content {
+    width: 750px;
+    max-width: 100%;
+}
+
+.roadmap-content p {
+    margin: 0 0 16px;
+    text-align: justify;
+}
+
+.roadmap-content ul {
+    margin: 0;
+    padding-left: 1.5rem;
+    text-align: left;
+}
+
+.roadmap-content li {
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.roadmap-content li:last-child {
+    margin-bottom: 0;
+}
+
+/* ========================================== Team ========================================== */
+#team {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 70px 70px;
+    margin-top: 30px;
+}
+
+.team-card {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 35px;
+    align-items: start;
+}
+
+.team-card img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 0;
+}
+
+.team-info {
+    text-align: left;
+}
+
+.preview {
+    font-size: 0.9rem;
+    color: var(--light-blue);
+    line-height: 1.2;
+}
+
+.bio-toggle {
+    display: block;
+    margin: 0;
+    background: none;
+    border: 0;
+    padding: 0;
+    color: var(--light-pink);
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: .25s;
+}
+
+.bio-toggle:hover {
+    color: var(--red);
+}
+
+.bio {
+    display: none;
+    margin-top: 15px;
+}
+
+.bio p {
+    margin: 0;
+    font-size: 0.8rem;
+    line-height: 1.2;
+}
+
+.bio.open {
+    display: block;
+}
+
+/* ========================================== Let's Connect ========================================== */
+#connect {
+    background: var(--purple);
+    padding: 130px 100px;
+    text-align: center;
+    color: var(--cream);
+}
+
+#connect h1 {
+    color: var(--cream);
+}
+
+.connect-intro {
+    max-width: 750px;
+    margin: 0 auto 20px;
+    text-align: center;
+}
+
+.connect-grid {
+    max-width: 1200px;
+    margin: 0 auto 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.connect-card {
+    padding: 30px;
+    border: 0px solid var(--mustard);
+    border-radius: 12px;
+}
+
+.connect-card h3 {
+    color: var(--pale-yellow);
+}
+
+.contact-email {
+    margin-top: 10px;
+}
+
+.contact-email a {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--pale-yellow);
+    text-decoration: none;
+}
+
+.contact-email a:hover {
+    color: var(--cream);
+}
+@media (max-width: 900px) {
+
+    :root {
+        --mobile-padding: 24px;
+    }
+
+    body {
+        font-size: 0.95rem;
+        line-height: 1.45;
+        overflow-x: hidden;
+    }
+
+    /* ---------- Navigation ---------- */
+
+    nav {
+        padding: 10px var(--mobile-padding);
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .logo img {
+        height: 38px;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px 20px;
+        font-size: .85rem;
+    }
+
+
+    /* ---------- Universal spacing ---------- */
+
+    section {
+        padding-left: var(--mobile-padding);
+        padding-right: var(--mobile-padding);
+        scroll-margin-top: 120px;
+    }
+
+
+    h1 {
+        font-size: clamp(1.9rem, 6vw, 2.5rem);
+    }
+
+    h2 {
+        font-size: clamp(1.5rem, 5vw, 2rem);
+    }
+
+    h3 {
+        font-size: clamp(1rem, 3vw, 1.2rem);
+    }
+
+
+    /* ---------- Hero ---------- */
+
+    .opening {
+        min-height: 350px;
+        height: auto;
+        padding: 150px var(--mobile-padding) 80px;
+
+        background-size: cover;
+        background-position: center;
+    }
+
+    .opening-text {
+        max-width: 100%;
+    }
+
+    .opening-subtitle {
+        font-size: 1rem;
+    }
+
+
+    /* ---------- Gap ---------- */
+
+    .gap {
+        padding: 80px var(--mobile-padding);
+    }
+
+    .gap-title {
+        display: block;
+        padding: 0;
+    }
+
+    .gap-the,
+    .gap-word {
+        font-size: clamp(2.5rem, 12vw, 3.5rem);
+    }
+
+
+    /* ---------- Building ---------- */
+
+    #building {
+        padding: 70px var(--mobile-padding) 50px;
+    }
+
+    .building-intro {
+        font-size: 1rem;
+        max-width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .building-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+
+    /* ---------- Timeline ---------- */
+
+    #timeline {
+        padding: 70px var(--mobile-padding);
+    }
+
+    .roadmap {
+        width: 100%;
+    }
+
+    .roadmap-item {
+        padding-right: 35px;
+    }
+
+    .roadmap-item p {
+        width: 100%;
+        text-align: left;
+    }
+
+
+    /* ---------- Team ---------- */
+
+    #team {
+        padding-left: var(--mobile-padding);
+        padding-right: var(--mobile-padding);
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .team-card {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .team-card img {
+        width: 140px;
+        height: 140px;
+        margin: 0 auto;
+    }
+
+
+    /* ---------- Connect ---------- */
+
+    #connect {
+        padding: 90px var(--mobile-padding);
+    }
+
+    .connect-intro {
+        max-width: 100%;
+    }
+
+    .connect-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .connect-card {
+        padding: 0;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    :root {
+        --mobile-padding: 20px;
+    }
+
+    body {
+        font-size: clamp(.82rem, 3.2vw, .9rem);
+        line-height: 1.45;
+    }
+
+
+    /* ---------- Navigation ---------- */
+
+    .nav-links {
+        gap: 10px 15px;
+    }
+
+
+    /* ---------- Headings ---------- */
+
+    h1 {
+        font-size: clamp(1.7rem, 8vw, 2rem);
+    }
+
+    h2 {
+        font-size: clamp(1.4rem, 7vw, 1.7rem);
+    }
+
+    h3 {
+        font-size: clamp(1rem, 4vw, 1.1rem);
+    }
+
+
+    /* ---------- Opening ---------- */
+
+    .opening {
+        padding: 130px var(--mobile-padding) 60px;
+        min-height: 300px;
+    }
+
+    .opening-text {
+        max-width: 100%;
+    }
+
+
+    /* ---------- Gap ---------- */
+
+    .gap {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+    .gap-title {
+        padding: 0;
+    }
+
+    .gap-the,
+    .gap-word {
+        font-size: clamp(2.2rem, 10vw, 2.5rem);
+        text-align: center;
+    }
+    .gap-content p {
+    font-size: 0.7rem;
+    margin: 0;
+    text-align: left;
+}
+
+
+    /* ---------- Timeline: remove graphics ---------- */
+
+    .roadmap::before,
+    .roadmap-item::before {
+        display: none;
+    }
+
+    .roadmap-item {
+        padding: 0 0 35px 0;
+        align-items: flex-start;
+    }
+
+    .roadmap-item h3 {
+        text-align: left;
+        margin-bottom: 10px;
+    }
+
+    .roadmap-item p {
+        width: 100%;
+        max-width: 100%;
+        text-align: left;
+    }
+
+
+    /* ---------- Team ---------- */
+
+    .team-card img {
+        width: 130px;
+        height: 130px;
+    }
+
+
+    /* ---------- Connect ---------- */
+
+    .contact-email a {
+        overflow-wrap: anywhere;
+        word-break: break-word;
+    }
+
+}
