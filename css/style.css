@@ -427,20 +427,35 @@ h3 {
     body {
         font-size: 0.95rem;
         line-height: 1.45;
-        overflow-x: hidden;
+        padding-top: 0;
     }
 
     /* ---------- Navigation ---------- */
 
+/* ---------- Navigation ---------- */
+
     nav {
-        padding: 10px var(--mobile-padding);
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        background: var(--mustard);
+        padding: max(16px, env(safe-area-inset-top)) var(--mobile-padding) 10px;
+    }
+
+    nav.scrolled {
+        padding-top: max(8px, env(safe-area-inset-top));
+        padding-bottom: 8px;
     }
 
     .logo img {
         height: 38px;
+        display: block;
     }
 
     .nav-links {
@@ -451,6 +466,9 @@ h3 {
         font-size: .85rem;
     }
 
+    #home {
+        scroll-margin-top: 0;
+    }
 
     /* ---------- Universal spacing ---------- */
 
@@ -561,6 +579,20 @@ h3 {
     .roadmap-item p {
         width: 100%;
         text-align: left;
+    }
+
+    .roadmap-content {
+        width: 90%;
+    }
+
+    .roadmap-item,
+    .roadmap-content,
+    .roadmap-content ul {
+        box-sizing: border-box;
+    }
+
+    .roadmap-content ul {
+        padding-left: 20px;
     }
 
 
