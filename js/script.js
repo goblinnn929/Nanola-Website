@@ -65,3 +65,20 @@ const nav = document.querySelector('nav');
 window.addEventListener('scroll', () => {
     nav.classList.toggle('scrolled', window.scrollY > 40);
 });
+
+// Subtle parallax drift on hero background image
+const heroSection = document.querySelector('.opening');
+
+function updateHeroParallax() {
+    if (window.innerWidth <= 900) return; // skip on mobile, keeps it simple/stable there
+
+    const rect = heroSection.getBoundingClientRect();
+    const drift = rect.top * 0.25; // lower number = more subtle drift
+    heroSection.style.backgroundPositionY = `calc(50% + ${drift}px)`;
+}
+
+window.addEventListener('scroll', () => {
+    requestAnimationFrame(updateHeroParallax);
+});
+
+updateHeroParallax(); // run once on load
