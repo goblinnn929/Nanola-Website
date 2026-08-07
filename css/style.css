@@ -285,14 +285,14 @@ h3 {
 
 .team-card {
     display: grid;
-    grid-template-columns: 180px 1fr;
+    grid-template-columns: 300px 1fr;
     gap: 35px;
     align-items: start;
 }
 
 .team-card img {
-    width: 180px;
-    height: 180px;
+    width: 300px;
+    height: 300px;
     object-fit: cover;
     border-radius: 12px;
     margin-bottom: 0;
