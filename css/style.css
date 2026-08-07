@@ -27,6 +27,23 @@ p {
     line-height: inherit;
 }
 
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity .7s ease, transform .7s ease;
+}
+
+.reveal.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stagger children within a grid so they don't all pop at once */
+.building-grid .reveal:nth-child(2) { transition-delay: .1s; }
+.building-grid .reveal:nth-child(3) { transition-delay: .2s; }
+.connect-grid .reveal:nth-child(2) { transition-delay: .1s; }
+.connect-grid .reveal:nth-child(3) { transition-delay: .2s; }
+
 /* ---------- Navigation ---------- */
 nav {
     position: fixed;
@@ -39,6 +56,13 @@ nav {
     align-items: center;
     padding: 5px 100px;
     background: var(--mustard);
+     transition: box-shadow .3s ease, padding .3s ease;
+}
+
+nav.scrolled {
+    box-shadow: 0 4px 12px rgba(18, 0, 35, .15);
+    padding-top: 3px;
+    padding-bottom: 3px;
 }
 
 .nav-links {
@@ -429,7 +453,6 @@ h3 {
     section {
         padding-left: var(--mobile-padding);
         padding-right: var(--mobile-padding);
-        scroll-margin-top: 120px;
     }
 
 
