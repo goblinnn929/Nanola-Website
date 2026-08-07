@@ -421,6 +421,7 @@ h3 {
 
     :root {
         --mobile-padding: 24px;
+        --timeline-inset: 50px;   /* distance from edge where circles/line sit */
     }
 
     body {
@@ -529,16 +530,32 @@ h3 {
 
     /* ---------- Timeline ---------- */
 
-    #timeline {
+   #timeline {
         padding: 70px var(--mobile-padding);
     }
 
     .roadmap {
         width: 100%;
+        padding-left: 30px;
+    }
+
+    .roadmap::before {
+        left: 0;
+        right: auto;
     }
 
     .roadmap-item {
-        padding-right: 35px;
+        align-items: flex-start;
+        padding: 0 0 50px 35px;
+    }
+
+    .roadmap-item::before {
+        left: -35px;
+        right: auto;
+    }
+
+    .roadmap-item h3 {
+        text-align: left;
     }
 
     .roadmap-item p {
@@ -572,10 +589,10 @@ h3 {
         }
     }
 
-.team-card img {
-    width: clamp(180px, 40vw, 260px);
-    height: clamp(180px, 40vw, 260px);
-    margin: 0 auto;
+    .team-card img {
+        width: clamp(180px, 40vw, 260px);
+        height: clamp(180px, 40vw, 260px);
+        margin: 0 auto;
     }
 
 
