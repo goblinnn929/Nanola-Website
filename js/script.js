@@ -2,7 +2,8 @@ document.querySelectorAll(".bio-toggle").forEach(button => {
 
     button.addEventListener("click", function () {
 
-        const bio = this.nextElementSibling;
+        const card = this.closest(".team-card");
+        const bio = card.querySelector(".bio");
 
         bio.classList.toggle("open");
 

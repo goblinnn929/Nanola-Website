@@ -305,13 +305,15 @@ h3 {
     grid-template-columns: repeat(2, 1fr);
     gap: 70px 70px;
     margin-top: 30px;
+    align-items: start;   /* add this line */
 }
 
 .team-card {
     display: grid;
     grid-template-columns: 300px 1fr;
-    gap: 35px;
-    align-items: start;
+    column-gap: 35px;
+    row-gap: 20px;
+    align-items: end;   /* changed from "start" */
 }
 
 .team-card img {
@@ -350,6 +352,7 @@ h3 {
 }
 
 .bio {
+    grid-column: 1 / -1;   /* new line: makes bio span full card width */
     display: none;
     margin-top: 15px;
 }
