@@ -562,12 +562,20 @@ h3 {
     .team-card {
         grid-template-columns: 1fr;
         gap: 20px;
+        
+        .team-info {
+        text-align: center;
+        }
+
+        .bio-toggle {
+        display: inline-block;
+        }
     }
 
-    .team-card img {
-        width: 140px;
-        height: 140px;
-        margin: 0 auto;
+.team-card img {
+    width: clamp(180px, 40vw, 260px);
+    height: clamp(180px, 40vw, 260px);
+    margin: 0 auto;
     }
 
 
@@ -688,8 +696,8 @@ h3 {
     /* ---------- Team ---------- */
 
     .team-card img {
-        width: 130px;
-        height: 130px;
+    width: clamp(150px, 45vw, 200px);
+    height: clamp(150px, 45vw, 200px);
     }
 
 
